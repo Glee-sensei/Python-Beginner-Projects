@@ -1,2 +1,2 @@
 # Python-Beginner-Projects
-For all my beginnner-friendly projects
+# For all my beginnner-friendly projects

@@ -2,8 +2,10 @@
 # upon choice, ask for password
 # Ask's what user wants to do
 # check the correctness of the password
-# define AgeCalculator function
-# Calculator function
+# based on user's choice, runs AgeCalculator function
+# or Calculator function
+# also integrates another function to handle the password reset option
+
 
 def auth():
     print("Welcome Favourite Human!")
@@ -39,18 +41,24 @@ def AgeCalculator():
 
 # Define the Calculator function
 def Calc():
-    import re
     print("Calculator")
     print("Type 'quit' to exit")
 
-    previous = 0
     run = True
     while run:
         equation = input("Enter equation:")
         if equation == 'quit':
-            run = False  # Correct the indentation
+            run = False  
         else:
             previous = eval(equation)
             print("Your answer is:", previous)
 
-auth()
+while True:
+    auth()
+
+    option = input("Would you like anything else? (yes/no): ")
+    if option.lower() == 'no':
+        print("Now Exiting Program........Byebye!!")
+        break
+    else:
+        print("Returning to program")

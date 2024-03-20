@@ -10,21 +10,29 @@
 # call your function
 
 import re
-print("Calculator")
-print ("type 'quit' to exit")
+while True:
+    print("Calculator")
+    print ("type 'quit' to exit")
 
-previous = 0
-run = True
+    previous = 0
+    run = True
 
-def Calc():
-    global previous
-    global run
-    equation = input("Enter equation:")
-    if equation == 'quit':
-        run = False
+    def Calc():
+        global previous
+        global run
+        equation = input("Enter equation:")
+        if equation == 'quit':
+            run = False
+        else:
+            previous = eval(equation)
+            print("Your answer is:", previous)
+
+    while run:
+        Calc()
+
+    choice = input("EXIT? (yes/no): ")
+    if choice.lower() == 'yes':
+        print("EXITING....Goodbye!!")
+        break
     else:
-        previous = eval(equation)
-        print("Your answer is:", previous)
-
-while run:
-    Calc()
+        print("Returning to calculator.")

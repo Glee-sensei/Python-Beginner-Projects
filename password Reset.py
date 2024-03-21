@@ -17,3 +17,5 @@ def reset():
                 break  # Exit the loop if password reset is successful
     else:
         print("Wrong input, refer to mail for more recovery options")
+
+reset()

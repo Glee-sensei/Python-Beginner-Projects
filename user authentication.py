@@ -6,7 +6,6 @@
 # or Calculator function
 # also integrates another function to handle the password reset option
 
-
 def auth():
     print("Welcome Favourite Human!")
     password = input("Enter password: ")
